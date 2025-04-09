@@ -42,5 +42,10 @@ namespace ParalimpiaGUI
             if(Kereso.Text != string.Empty) Paralimpiak.ItemsSource = paralimpiak.Where(x => x.Orszag.ToLower().Contains(Kereso.Text.ToLower()) || x.Varos.ToLower().Contains(Kereso.Text.ToLower()));
             else Paralimpiak.ItemsSource = paralimpiak;
         }
+
+        private void Ajanlat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
