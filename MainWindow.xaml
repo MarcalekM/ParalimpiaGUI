@@ -1,0 +1,33 @@
+﻿<Window x:Class="ParalimpiaGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ParalimpiaGUI"
+        mc:Ignorable="d"
+        Title="Magyar paralimpiai eredmények" Height="450" Width="800">
+    <Grid>
+        <Label Content="Szűrés ország vagy város alapján:" HorizontalAlignment="Left" Margin="107,60,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Kereso" HorizontalAlignment="Left" Margin="322,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="272" TextChanged="Kereso_TextChanged"/>
+        <DataGrid x:Name="Paralimpiak" Margin="25,111,10,110" SelectionChanged="Paralimpiak_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="#" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="rendező orszag" Binding="{Binding Orszag}"/>
+                <DataGridTextColumn Header="helyszin" Binding="{Binding Varos}"/>
+                <DataGridTextColumn Header="év" Binding="{Binding Ev}"/>
+                <DataGridTextColumn Header="arany" Binding="{Binding Arany}"/>
+                <DataGridTextColumn Header="Ezüst" Binding="{Binding Ezust}"/>
+                <DataGridTextColumn Header="bronz" Binding="{Binding Bronz}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Kijelölt év:" HorizontalAlignment="Left" Margin="90,362,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ValasztottEv" Content="" HorizontalAlignment="Left" Margin="200,362,0,0" VerticalAlignment="Top"/>
+        <Label Content="Arany" HorizontalAlignment="Left" Margin="277,329,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ezüst" HorizontalAlignment="Left" Margin="389,329,0,0" VerticalAlignment="Top"/>
+        <Label Content="Bronz" HorizontalAlignment="Left" Margin="490,329,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ValasztottArany" HorizontalAlignment="Left" Margin="270,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55"/>
+        <TextBox x:Name="ValasztottEzust" HorizontalAlignment="Left" Margin="380,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55"/>
+        <TextBox x:Name="ValasztottBronz" HorizontalAlignment="Left" Margin="483,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55"/>
+
+    </Grid>
+</Window>
