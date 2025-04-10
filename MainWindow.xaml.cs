@@ -45,7 +45,15 @@ namespace ParalimpiaGUI
 
         private void Ajanlat_Click(object sender, RoutedEventArgs e)
         {
-
+            var result = MessageBox.Show($"Valóban javaslatot tesz a(z) {ValasztottEv.Content} évi paralimpia éremszámára?","Megerősítés", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+            if (result.ToString().Equals("Yes"))
+            {
+                using StreamWriter sw = new(
+                    path: @"../../../src/javaslat.txt",
+                    append: true
+                    );
+                sw.WriteLine($"{DateTime.Now} Id:{paralimpiak.Where(x => x.Orszag.ToLower().Contains(Kereso.Text.ToLower()) || x.Varos.ToLower().Contains(Kereso.Text.ToLower())).ToList()[Paralimpiak.SelectedIndex].Id} Érmek: {ValasztottArany.Text} {ValasztottEzust.Text} {ValasztottBronz.Text}");
+            }
         }
     }
 }

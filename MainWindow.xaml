@@ -28,7 +28,7 @@
         <TextBox x:Name="ValasztottArany" HorizontalAlignment="Left" Margin="270,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55"/>
         <TextBox x:Name="ValasztottEzust" HorizontalAlignment="Left" Margin="380,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55"/>
         <TextBox x:Name="ValasztottBronz" HorizontalAlignment="Left" Margin="483,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55"/>
-        <Button x:Name="Ajanlat" Content="Button" HorizontalAlignment="Left" Margin="638,366,0,0" VerticalAlignment="Top" Height="38" Width="91" Click="Ajanlat_Click"/>
+        <Button x:Name="Ajanlat" Content="módosítási javaslat" HorizontalAlignment="Left" Margin="638,366,0,0" VerticalAlignment="Top" Height="38" Width="116" Click="Ajanlat_Click"/>
 
     </Grid>
 </Window>
